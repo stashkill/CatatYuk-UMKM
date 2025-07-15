@@ -92,7 +92,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         
                         $notification_type = $type === 'debt' ? 'debt_reminder' : 'receivable_reminder';
                         $title = $type === 'debt' ? 'Pengingat Pembayaran Utang' : 'Pengingat Penagihan Piutang';
-                        $message = "Jatuh tempo {$type} kepada {$contact_name} pada " . formatDate($due_date);
+                        $message = sprintf("Jatuh tempo %s kepada %s pada %s", ucfirst($type), $contact_name, formatDate($due_date));
                         
                         $stmt->execute([
                             $current_user['id'],
