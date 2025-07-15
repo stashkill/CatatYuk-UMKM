@@ -1,6 +1,6 @@
 # CatatYuk - Aplikasi Pencatatan Keuangan UMKM by Keong Balap Dev.
 
-**CatatYuk** adalah aplikasi web untuk pencatatan keuangan UMKM (Usaha Mikro, Kecil, dan Menengah) yang dirancang khusus untuk membantu pengusaha kecil mengelola cashflow mereka dengan mudah dan efisien. Dibuat oleh Keong Balap Dev.
+**CatatYuk** adalah aplikasi web untuk pencatatan keuangan UMKM (Usaha Mikro, Kecil, dan Menengah) yang dirancang khusus untuk membantu pengusaha kecil mengelola cashflow mereka dengan mudah dan efisien. dibuat oleh Keong Balap Dev.
 
 ## 🚀 Fitur Utama
 
@@ -99,7 +99,7 @@ cd /opt/lampp/htdocs  # Linux
    define('DB_HOST', 'localhost');
    define('DB_NAME', 'catatYuk');
    define('DB_USER', 'root');
-   define('DB_PASS', ''); // Kosongkan jika tidak ada password
+   define('DB_PASS', ''); // Kosongkan aja kalau tidak ada passwordnya
    ```
 
 2. Set permission folder (Linux/Mac):
@@ -112,8 +112,7 @@ cd /opt/lampp/htdocs  # Linux
 
 1. Buka browser dan akses `http://localhost/CatatYuk`
 2. Login dengan akun default:
-   - **Admin**: admin@catatYuk.com / admin123
-   - **Kasir**: kasir@catatYuk.com / kasir123
+   - **Admin**: admin / admin123
 
 ## 👥 Panduan Penggunaan
 
@@ -319,12 +318,12 @@ Kami menyambut kontribusi dari komunitas! Berikut cara berkontribusi:
 
 ### Kontak
 - **Email**: dimastirtajasa10@gmail.com
-- **Website**: https://catatYuk.com
-- **GitHub**: https://github.com/catatYuk/catatYuk
+- **Website**: [Coming Soon](http://127.0.0.1)
+- **GitHub**: https://github.com/stashkill/CatatYuk-UMKM 
 
 ### Community
-- **Discord**: [Coming Soon](https://discord.gg/catatYuk)
-- **Telegram**: [Coming Soon](https://t.me/catatYukSupport)
+- **Discord**: [Coming Soon](http://127.0.0.1)
+- **Telegram**: [Coming Soon](http://127.0.0.1)
 
 ---
 
