@@ -1,6 +1,6 @@
 # Quick Start Guide - CatatYuk By Keong Balap Dev
 
-Panduan cepat untuk menjalankan aplikasi CatatYuk dalam 5 menit guys!
+Panduan cepat untuk menjalankan aplikasi CatatYuk dalam 5 menit aja!
 
 ## 🚀 Instalasi Cepat dengan XAMPP
 
@@ -90,8 +90,11 @@ define('DB_PASS', ''); // Kosong untuk XAMPP default
 ## 📱 Fitur Mobile
 
 Aplikasi sudah responsive dan bisa diakses dari:
-- **Smartphone**: Buka browser → `http://[IP_KOMPUTER]/CatatYuk`
-- **Tablet**: Interface otomatis menyesuaikan ukuran layar
+- **Laptop/PC (Windows, Linux, MacOS)**
+- **Smartphone (Android,Ios, & More)**
+- **Tablet**
+
+Interface otomatis menyesuaikan ukuran layar!
 
 ## 🔒 Keamanan Dasar
 
@@ -107,6 +110,7 @@ Jika mengalami masalah:
 1. Cek file `docs/INSTALLATION_GUIDE.md` untuk panduan detail
 2. Lihat section Troubleshooting di README.md
 3. Cek log error di `xampp/apache/logs/error.log`
+4. Kontak email saya ke dimastirtajasa10@gmail.com
 
 ## 🎉 Selamat!
 
