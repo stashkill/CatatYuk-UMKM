@@ -258,9 +258,12 @@ include "../../components/header.php";
                                 <label for="amount" class="form-label">Jumlah (Rp) <span class="text-danger">*</span></label>
                                 <div class="input-group">
                                     <span class="input-group-text">Rp</span>
+                                    <?php
+                                    $amount = $_POST['amount'] ?? ($debt['amount'] ?? '');
+                                    $amount = number_format((float) $amount, 0, '', '.');
+                                    ?>
                                     <input type="text" class="form-control currency-input" id="amount" name="amount" 
-                                           placeholder="0" required 
-                                           value="<?php echo htmlspecialchars($_POST["amount"] ?? formatCurrencyValue($debt["amount"])); ?>">
+                                           placeholder="0" value="<?php echo htmlspecialchars($amount); ?>" required>
                                 </div>
                                 <div class="form-text">Masukkan jumlah total utang/piutang</div>
                             </div>
