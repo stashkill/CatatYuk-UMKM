@@ -55,7 +55,7 @@ function formatCurrency($amount) {
 function getCurrencyValue($formatted_string) {
     // Remove 'Rp ' prefix, dots, and commas
     $value = str_replace(["Rp ", ".", ","], "", $formatted_string);
-    // Replace comma with dot for decimal if any (though usually not needed for IDR)
+    // Replace comma with dot for decimal if any
     $value = str_replace(",", ".", $value);
     return (float) $value;
 }

@@ -95,7 +95,9 @@ try {
         $stmt->execute([$debt_id, $payment_amount, $payment_date, $payment_notes ?: null]);
         
         // Update remaining amount
-        $new_remaining = $debt['remaining_amount'] - $payment_amount;
+        $current_remaining = getCurrencyValue($debt['remaining_amount']);
+        error_log("DEBUG: remaining_before = {$debt['remaining_amount']}, payment = {$payment_amount}, new_remaining = {$new_remaining}");
+        $new_remaining = round($debt['remaining_amount'] - $payment_amount, 2); 
         $new_status = $new_remaining <= 0 ? 'paid' : 'partial';
         
         $stmt = $db->prepare("
