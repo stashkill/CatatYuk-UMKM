@@ -183,13 +183,13 @@ include '../../components/header.php';
                                     <input type="radio" class="btn-check" name="type" id="type_income" 
                                            value="income" <?php echo $default_type === 'income' ? 'checked' : ''; ?>>
                                     <label class="btn btn-outline-success" for="type_income">
-                                        <i class="bi bi-arrow-up-circle me-2"></i>Pemasukan
+                                        <i class="bi bi-arrow-down-circle me-2"></i>Pemasukan
                                     </label>
                                     
                                     <input type="radio" class="btn-check" name="type" id="type_expense" 
                                            value="expense" <?php echo $default_type === 'expense' ? 'checked' : ''; ?>>
                                     <label class="btn btn-outline-danger" for="type_expense">
-                                        <i class="bi bi-arrow-down-circle me-2"></i>Pengeluaran
+                                        <i class="bi bi-arrow-up-circle me-2"></i>Pengeluaran
                                     </label>
                                 </div>
                             </div>

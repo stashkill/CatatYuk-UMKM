@@ -129,7 +129,7 @@ include '../../components/header.php';
                         <small><?php echo $monthly_stats['income_count']; ?> transaksi</small>
                     </div>
                     <div>
-                        <i class="bi bi-arrow-up-circle" style="font-size: 3rem; opacity: 0.7;"></i>
+                        <i class="bi bi-arrow-down-circle" style="font-size: 3rem; opacity: 0.7;"></i>
                     </div>
                 </div>
             </div>
@@ -144,7 +144,7 @@ include '../../components/header.php';
                         <small><?php echo $monthly_stats['expense_count']; ?> transaksi</small>
                     </div>
                     <div>
-                        <i class="bi bi-arrow-down-circle" style="font-size: 3rem; opacity: 0.7;"></i>
+                        <i class="bi bi-arrow-up-circle" style="font-size: 3rem; opacity: 0.7;"></i>
                     </div>
                 </div>
             </div>
