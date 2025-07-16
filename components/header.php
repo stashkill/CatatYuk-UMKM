@@ -94,10 +94,10 @@
                                 <small class="text-muted">Role: <?php echo ucfirst(getCurrentUser()['role']); ?></small>
                             </span></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="<?php echo APP_URL; ?>/pages/auth/profile.php">
+                            <li><a class="dropdown-item" href="<?php echo APP_URL; ?>/pages/settings/index.php">
                                 <i class="bi bi-person me-2"></i>Profil
                             </a></li>
-                            <li><a class="dropdown-item" href="<?php echo APP_URL; ?>/pages/auth/change-password.php">
+                            <li><a class="dropdown-item" href="<?php echo APP_URL; ?>/pages/settings/index.php">
                                 <i class="bi bi-key me-2"></i>Ubah Password
                             </a></li>
                             <li><hr class="dropdown-divider"></li>
@@ -128,3 +128,5 @@
     <!-- Main Content -->
     <main class="<?php echo isLoggedIn() ? 'container-fluid mt-4' : ''; ?>">
 
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

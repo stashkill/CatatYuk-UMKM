@@ -31,6 +31,8 @@ $payment_amount = getCurrencyValue($_POST['payment_amount'] ?? '0');
 $payment_date = $_POST['payment_date'] ?? '';
 $payment_notes = sanitizeInput($_POST['payment_notes'] ?? '');
 
+error_log("add_payment.php: debt_id = " . $debt_id . ", payment_amount = " . $payment_amount . ", payment_date = " . $payment_date . ", payment_notes = " . $payment_notes);
+
 // Validation
 if ($debt_id <= 0) {
     echo json_encode(['success' => false, 'message' => 'ID utang/piutang tidak valid']);
@@ -93,11 +95,10 @@ try {
             VALUES (?, ?, ?, ?)
         ");
         $stmt->execute([$debt_id, $payment_amount, $payment_date, $payment_notes ?: null]);
+        error_log("add_payment.php: Insert payment result = " . ($stmt->rowCount() > 0 ? "Success" : "Failed"));
         
         // Update remaining amount
-        $current_remaining = getCurrencyValue($debt['remaining_amount']);
-        error_log("DEBUG: remaining_before = {$debt['remaining_amount']}, payment = {$payment_amount}, new_remaining = {$new_remaining}");
-        $new_remaining = round($debt['remaining_amount'] - $payment_amount, 2); 
+        $new_remaining = $debt['remaining_amount'] - $payment_amount;
         $new_status = $new_remaining <= 0 ? 'paid' : 'partial';
         
         $stmt = $db->prepare("
@@ -106,6 +107,7 @@ try {
             WHERE id = ?
         ");
         $stmt->execute([$new_remaining, $new_status, $debt_id]);
+        error_log("add_payment.php: Update remaining_amount result = " . ($stmt->rowCount() > 0 ? "Success" : "Failed") . ", new_remaining = " . $new_remaining . ", new_status = " . $new_status);
         
         // Log activity
         $action_desc = "Added payment for {$debt['type']}: {$debt['contact_name']} - " . formatCurrency($payment_amount);
