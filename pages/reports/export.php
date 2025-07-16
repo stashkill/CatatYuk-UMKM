@@ -123,13 +123,18 @@ if ($export_format === 'pdf') {
                                      $start_date, $end_date, $summary, $categories, $top_transactions, 
                                      $profit_loss, $profit_margin, $current_user);
     
+    $tmp_dir = __DIR__ . '/tmp'; //Make temp folder
+    if (!file_exists($tmp_dir)) {
+        mkdir(tmp_dir, 0777, true); 
+    }
     // Save HTML to temporary file
-    $temp_file = '/tmp/' . $filename . '.html';
+    $temp_file = $tmp_dir . '/' . $filename . '.html';
+    $pdf_file = $tmp_dir . '/' . $filename . '.pdf';
+
     file_put_contents($temp_file, $html_content);
     
     // Convert HTML to PDF using wkhtmltopdf (if available) or display HTML for browser PDF generation
     if (shell_exec('which wkhtmltopdf')) {
-        $pdf_file = '/tmp/' . $filename . '.pdf';
         $command = "wkhtmltopdf --page-size A4 --margin-top 0.75in --margin-right 0.75in --margin-bottom 0.75in --margin-left 0.75in '$temp_file' '$pdf_file'";
         shell_exec($command);
         
