@@ -304,6 +304,12 @@ $(document).ready(function() {
         
         // Update form styling
         updateFormStyling(type);
+
+        //Update Expense/Income
+        const newUrl = window.location.origin + window.location.pathname + 
+                       (type === 'income' ? '?type=income' : '?type=expense');
+        history.pushState({ path: newUrl }, '', newUrl);
+
     });
     
     // Initialize form styling

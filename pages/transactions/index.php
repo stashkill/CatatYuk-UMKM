@@ -127,7 +127,7 @@ include '../../components/header.php';
                     <p class="text-muted mb-0">Kelola semua transaksi keuangan UMKM Anda</p>
                 </div>
                 <div>
-                    <a href="add.php" class="btn btn-primary">
+                    <a href="add.php?type=income" class="btn btn-primary">
                         <i class="bi bi-plus-circle me-2"></i>Tambah Transaksi
                     </a>
                 </div>
